@@ -30,3 +30,50 @@ Then run it with: java -jar TrafficSimulation.jar<br>
 
 **v0.1 - 2014-02-23**
 Initial release.<br>
+
+#####Bonus
+
+####How to create a new map
+
+Create a new .xml file wherever you want and follow the guides.
+
+* Creation of a new cross road:<br>
+`<CrossRoad>`<br>
+`<Name>`C1`</Name>`<br>
+`<PosX>`77`</PosX>`<br>
+`<PosY>`20`</PosY>`<br>
+`</CrossRoad>`<br>
+
+* Creation of a new road:<br>
+`<Road>`<br>
+`<Starting_CrossRoad>`C1`</Starting_CrossRoad>`<br>
+`<Ending_CrossRoad>`C3`</Ending_CrossRoad>`<br>
+`</Road>`<br>
+
+* Creation of a new map:<br>
+`<?xml version=”1.0“ encoding=”UTF-8“?>`<br>
+`<map>`<br><br>
+`<CrossRoad>`<br>
+`<Name>`C1`</Name>`<br>
+`<PosX>`77`</PosX>`<br>
+`<PosY>`20`</PosY>`<br>
+`</CrossRoad>`<br><br>
+`<CrossRoad>`<br>
+`<Name>`C2`</Name>`<br>
+`<PosX>`98`</PosX>`<br>
+`<PosY>`63`</PosY>`<br>
+`</CrossRoad>`<br><br>
+`<CrossRoad>`<br>
+`<Name>`C3`</Name>`<br>
+`<PosX>`6`</PosX>`<br>
+`<PosY>`150`</PosY>`<br>
+`</CrossRoad>`<br><br>
+`<Road>`<br>
+`<Starting_CrossRoad>`C1`</Starting_CrossRoad>`<br>
+`<Ending_CrossRoad>`C3`</Ending_CrossRoad>`<br>
+`</Road>`<br><br>
+`<Road>`<br>
+`<Starting_CrossRoad>`C3`</Starting_CrossRoad>`<br>
+`<Ending_CrossRoad>`C2`</Ending_CrossRoad>`<br>
+`</Road>`<br><br>
+`</map>`<br>
